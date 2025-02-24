@@ -2,7 +2,7 @@ module.exports = {
     title: "Classic MSPA Styles",
     summary: "Tweaks to make UHSC look like the old MSPA site",
     author: "aubymori",
-    modVersion: 1.0,
+    modVersion: 1.1,
 
     routes: {},
     styles: [],
@@ -48,6 +48,7 @@ module.exports = {
         {
             computed.styles.push({ body: `
             .tabFrame.mspa > div,
+            .tabFrame.cascade > div,
             .tabFrame.dark > div {
                 --nav-bg: #000000 !important;
                 --nav-divider: #bbbbbb !important;
