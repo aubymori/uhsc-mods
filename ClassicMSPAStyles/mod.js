@@ -2,7 +2,7 @@ module.exports = {
     title: "Classic MSPA Styles",
     summary: "Tweaks to make UHSC look like the old MSPA site",
     author: "aubymori",
-    modVersion: 1.1,
+    modVersion: 1.2,
 
     routes: {},
     styles: [],
@@ -68,17 +68,17 @@ module.exports = {
         if (store.get("classicnav"))
         {
             computed.styles.push({ body: `
-            .footer {
+            .pageBody .footer {
                 background: var(--page-pageFrame) !important;
                 position: relative !important;
                 height: 102px !important;
             }
 
-            .footer img {
+            .pageBody .footer img {
                 display: none !important;
             }
 
-            .footer::before {
+            .pageBody .footer::before {
                 content: "";
                 position: absolute;
                 top: 0;
@@ -88,15 +88,15 @@ module.exports = {
                 background: no-repeat url("assets://classic-mspa-styles/v2_mspalogo.gif");
             }
 
-            .footer.scratch::before { 
+            .pageBody .footer.scratch::before { 
                 background-image: url("assets://classic-mspa-styles/v2_mspalogo_scratch.gif") !important;
             }
 
-            .footer.sbahj::before { 
+            .pageBody .footer.sbahj::before { 
                 background-image: url("assets://classic-mspa-styles/mspalogo_sbahj.jpg") !important;
             }
 
-            .footer.cascade::before { 
+            .pageBody .footer.cascade::before { 
                 background-image: url("assets://classic-mspa-styles/v2_mspalogo_cascade.gif") !important;
             }
 
@@ -105,17 +105,17 @@ module.exports = {
                 padding-bottom: 125px;
             }
 
-            .footer.trickster {
+            .pageBody .footer.trickster {
                 height: 0 !important;
                 background: transparent !important;
             }
 
-            .footer.trickster::before {
+            .pageBody .footer.trickster::before {
                 top: -102px;
                 background-image: url("assets://classic-mspa-styles/v2_mspalogo_trickster.gif") !important;
             }
 
-            .footer.A6A6::before {
+            .pageBody .footer.A6A6::before {
                 background-image: url("assets://classic-mspa-styles/v2_mspalogo_A6A6.gif") !important;
             }
             `});
